@@ -399,35 +399,8 @@ function library:Evil(text,text2,logo)
 	Main.Size = UDim2.new(0, 0, 0, 0)
 	Main.ClipsDescendants = true
 	Main.AnchorPoint = Vector2.new(0.5, 0.5)
-
-	local UserInputService = game:GetService("UserInputService")
-	local executor = identifyexecutor()
-
-	if UserInputService.TouchEnabled then
-		Main:TweenSize(UDim2.new(0,585,0,400),"Out","Quad",0.4,true)
-  local ScreenGui = Instance.new("ScreenGui")
-  local ImageButton = Instance.new("ImageButton")
-  local UICorner = Instance.new("UICorner")
-  		
-  ScreenGui.Name = "ImageButton"
-  ScreenGui.Parent = game.CoreGui
-  ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-  
-  ImageButton.Parent = ScreenGui
-  ImageButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-  ImageButton.BorderSizePixel = 0
-  ImageButton.Position = UDim2.new(0.120833337, 0, 0.0952890813, 0)
-  ImageButton.Size = UDim2.new(0, 50, 0, 50)
-  ImageButton.Draggable = true
-  ImageButton.Image = "http://www.roblox.com/asset/?id="..(_G.Logo)
-  ImageButton.MouseButton1Down:connect(function()
-  	game:GetService("VirtualInputManager"):SendKeyEvent(true,305,false,game)
-  	game:GetService("VirtualInputManager"):SendKeyEvent(false,305,false,game)
-  end)
-UICorner.Parent = ImageButton
-	else
-		Main:TweenSize(UDim2.new(0,585,0,625),"Out","Quad",0.4,true)
-	end
+	
+	Main:TweenSize(UDim2.new(0,585,0,625),"Out","Quad",0.4,true)
 	
     local Top2 = Instance.new("Frame")
     Top2.Name = "Top2"
