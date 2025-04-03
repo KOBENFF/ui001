@@ -531,8 +531,7 @@ function library:Evil(text,text2,logo)
 					uitoggled = true
 				else
 					UI.Enabled = true
-                    UI:TweenSize(UDim2.new(0, 585, 0, 625), "Out", "Quad", 0.4, true)
-					-- Main:TweenSize(UDim2.new(0, 585, 0, 400), Enum.EasingDirection.Out, Enum.EasingStyle.Quart,0.4,true)
+					Main:TweenSize(UDim2.new(0, 585, 0, 625), Enum.EasingDirection.Out, Enum.EasingStyle.Quart,0.4,true)
 					uitoggled = false
 				end
 			end
